@@ -13,10 +13,10 @@ public class Main {
         try {
             System.out.print("Enter first number: ");
             int num1 = scanner.nextInt();
-        
+
             System.out.print("Enter second number: ");
             int num2 = scanner.nextInt();
-        
+
             System.out.println("Addition: " + calc.add(num1, num2));
             System.out.println("Subtraction: " + calc.subtract(num1, num2));
             System.out.println("Multiplication: " + calc.multiply(num1, num2));
@@ -26,11 +26,19 @@ public class Main {
             int squareInput = scanner.nextInt();
             System.out.println("Square: " + calc.square(squareInput));
             System.out.println("Cube: " + calc.cube(squareInput));
-        
+
             System.out.print("Enter a number for square root: ");
             int rootInput = scanner.nextInt();
             System.out.println("Square Root: " + calc.squareRoot(rootInput));
-        
-        
+            } catch (ArithmeticException e) {
+                System.out.println("Arithmetic Error: " + e.getMessage());
+            } catch (InputMismatchException e) {
+                System.out.println("Invalid input. Please enter integers only.");
+            } catch (Exception e) {
+                System.out.println("Unexpected Error: " + e.getMessage());
+            } finally {
+                scanner.close();
+            }
+
     }
 }
