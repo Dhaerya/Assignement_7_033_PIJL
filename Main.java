@@ -9,7 +9,7 @@ public class Main {
     public static void main(String[] args) {
         Calculator calc = new Calculator();
         Scanner scanner = new Scanner(System.in);
-        
+
         try {
             System.out.print("Enter first number: ");
             int num1 = scanner.nextInt();
@@ -21,6 +21,16 @@ public class Main {
             System.out.println("Subtraction: " + calc.subtract(num1, num2));
             System.out.println("Multiplication: " + calc.multiply(num1, num2));
             System.out.println("Division: " + calc.divide(num1, num2));
+
+            System.out.print("Enter a number for square and cube: ");
+            int squareInput = scanner.nextInt();
+            System.out.println("Square: " + calc.square(squareInput));
+            System.out.println("Cube: " + calc.cube(squareInput));
+        
+            System.out.print("Enter a number for square root: ");
+            int rootInput = scanner.nextInt();
+            System.out.println("Square Root: " + calc.squareRoot(rootInput));
+        
         
     }
 }
